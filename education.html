@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Devottham D K</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <a href="#" class="logo"><span>D</span>evottham</a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+        </ul>
+        <div class="right-header">
+            <a href="chat.html" class="btn">Let's Connect <i class='bx bx-message-dots'></i></a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="education" id="education">
+        <div class="container">
+            <h1>Education</h1>
+            <div class="timeline">
+                <!-- 10th Grade -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <h4>10th Grade</h4>
+                        <p><strong>SBOA School and Junior College</strong><br>
+                        Completed my 10th grade with a strong foundation in Science and Mathematics.</p>
+                    </div>
+                </div>
+
+                <!-- 12th Grade -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <h4>12th Grade</h4>
+                        <p><strong>Velammal Vidyalaya Annexure</strong><br>
+                        Completed my 12th grade with a focus on Science and Mathematics.</p>
+                    </div>
+                </div>
+
+                <!-- College -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2022 - 2026</h3>
+                        <h4>Bachelor of Technology (BTech)</h4>
+                        <p><strong>Panimalar Engineering College</strong><br>
+                        Currently pursuing a degree in <strong>Computer Science and Business Systems (CSBS)</strong> with a focus on frontend development and UI/UX design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <h1>Experience</h1>
+            <div class="timeline">
+                <!-- Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <h4>Frontend Development Internship</h4>
+                        <p><strong>First Software Solutions</strong><br>
+                        Completed an internship as a <strong>Frontend Developer</strong>, where I worked on building responsive and user-friendly web interfaces using HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<style>
+    /* Paper Pin Design for Timeline */
+    .timeline-dot {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        left: 50%;
+        top: 20px;
+        margin-left: -12px;
+        z-index: 1;
+    }
+
+    .timeline-dot::before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+    }
+
+    .timeline-dot::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+        top: 8px;
+        left: 8px;
+    }
+    .timeline-content {
+        border-left: 3px solid linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+        position: relative;
+        background: linear-gradient(to right, #fff 0%, #fcf4f8 100%);
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        background: linear-gradient(to left, #fff 0%, #fcf4f8 100%);
+    }
+
+    .timeline-dot {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: rotate(-45deg) scale(1); }
+        50% { transform: rotate(-45deg) scale(1.1); }
+        100% { transform: rotate(-45deg) scale(1); }
+    }
+
+    .education-badge {
+        background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+</style>
+
+    <script src="script.js"></script>
+</body>
+</html>

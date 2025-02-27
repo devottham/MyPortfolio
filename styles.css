@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e3edf7;
+    overflow-x: hidden;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #333;
+}
+
+span {
+    background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Header */
+header {
+    padding: 15px 8%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #fff 0%, #edf4fa 51%, #e5eef7 100%);
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+header .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+ul.navlist {
+    display: flex;
+}
+
+.navlist li {
+    margin: 0 1rem;
+}
+
+.navlist li a {
+    display: inline-flex;
+    font-weight: 600;
+}
+
+.navlist li a:hover, .navlist li a.active {
+    background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    grid-gap: .8rem;
+}
+
+.btn {
+    background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-icon .bar, .menu-icon::after, .menu-icon::before {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: #000;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+.menu-icon.active::before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-icon.active::after {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu-icon.active .bar {
+    opacity: 0;
+}
+
+/* About Section */
+section.about {
+    padding: 90px 8%;
+    background: linear-gradient(98deg, #e5eef7 0%, #fff 100%);
+}
+
+.about-me {
+    padding: 100px 0;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.about-content {
+    margin-top: 30px;
+}
+
+.personal-info h2 span {
+    color: #f70178;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(180deg, rgb(8, 0, 4) 0%, rgb(7, 0, 12) 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+
+.timeline-dot {
+    position: absolute;
+    left: -10px; /* Adjust to align with the line */
+    top: 0; /* Align vertically with the item */
+    background-color: #f70178; /* Dot color */
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    padding-left: 30px; /* Space between dot and text */
+    border-left: 3px solid #f70178; /* Line connecting the dots */
+}
+
+.skills, .hobbies, .projects {
+    margin-top: 40px;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.skills ul li {
+    background: #f70178;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+/* Chat Section */
+section.chat {
+    padding: 90px 8%;
+    background: linear-gradient(98deg, #e5eef7 0%, #fff 100%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 100%;
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.chat-box div {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #f1f1f1;
+    border-radius: 5px;
+    color: #333;
+}
+
+/* Add any new styles or modify existing ones based on your design preferences */
+.about-me {
+    padding: 90px 8%;
+    background: linear-gradient(98deg, #e5eef7 0%, #fff 100%);
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -10px; /* Adjust to align with the line */
+    top: 0; /* Align vertically with the item */
+    background-color: #f70178; /* Dot color */
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    padding-left: 30px; /* Space between dot and text */
+    border-left: 3px solid #f70178; /* Line connecting the dots */
+}
+
+.skills, .hobbies, .projects {
+    margin-top: 40px;
+}
+
+.skills ul, .hobbies ul, .projects ul {
+    list-style: none;
+}
+header {
+    padding: 15px 8%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #fff 0%, #edf4fa 51%, #e5eef7 100%);
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+header .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+ul.navlist {
+    display: flex;
+}
+
+.navlist li {
+    margin: 0 1rem;
+}
+
+.navlist li a {
+    display: inline-flex;
+    font-weight: 600;
+}
+
+.navlist li a:hover, .navlist li a.active {
+    background: linear-gradient(180deg, rgba(247, 1, 120, 1) 0%, rgba(160, 8, 156, 1) 51%, rgba(99, 13, 178, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
